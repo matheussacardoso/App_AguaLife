@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <View
+            android:id="@+id/container_header"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/container_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_peso"
+            android:layout_width="115dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:autofillHints=""
+            android:fontFamily="sans-serif"
+            android:hint="@string/hint_peso"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:padding="18sp"
+            android:textAlignment="viewStart"
+            android:textSize="18sp"
+            android:typeface="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_nome" />
+
+        <EditText
+            android:id="@+id/edit_idade"
+            android:layout_width="115dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="20dp"
+            android:autofillHints=""
+            android:hint="@string/hint_idade"
+            android:inputType="number"
+            android:maxLength="10"
+            android:padding="15dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/edit_peso"
+            app:layout_constraintTop_toBottomOf="@+id/edit_nome" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_calcular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/bg_degrade_button"
+            android:text="@string/text_button_calcular"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_idade"
+            tools:ignore="VisualLintButtonSize" />
+
+        <View
+            android:id="@+id/container_resultado"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/container_resultado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_calcular" />
+
+        <TextView
+            android:id="@+id/txt_resultdo_ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/purple_200"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/container_resultado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/container_resultado" />
+
+        <EditText
+            android:id="@+id/edit_nome"
+            android:layout_width="115dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="28dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/hint_nome"
+            android:inputType="textPersonName"
+            android:maxLength="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_header" />
+
+        <Button
+            android:id="@+id/bt_lista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:onClick="abrirLista"
+            android:text="@string/text_button_lista"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container_resultado" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AguaLife</string>
+    <string name="hint_peso">peso(Kg)</string>
+    <string name="hint_idade">idade</string>
+    <string name="text_button_calcular">Calcular consumo água</string>
+
+    <string name="hint_nome">Nome</string>
+    <string name="txt_informe_nome">Informe seu nome</string>
+    <string name="text_button_lista">Lista de pessoas</string>
+
+    <string name="txt_lista">Histórico dos atletas</string>
+
+    <string name="text_button_cadastro">Cadastrar mais atletas</string>
+
+</resources>
